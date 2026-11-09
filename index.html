@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- viewport-fit=cover lets the game use the full screen on notched phones;
+       zoom is disabled so pinches/double-taps never move the game. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1b1f3b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Auto Rally">
+  <meta name="description" content="Auto Rally – an offline auto-rickshaw racing game for phones and computers.">
+  <title>Auto Rally</title>
+  <!-- Installable app (PWA). Relative paths so it also works under a GitHub Pages sub-folder. -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Game world is drawn here -->
+    <canvas id="game" aria-label="Auto Rally game view"></canvas>
+
+    <!-- HTML overlay layer: HUD, menus and touch buttons are added in later steps -->
+    <div id="ui" class="ui-layer">
+      <div id="hud" class="hud"></div>
+      <div id="screens" class="screens"></div>
+      <div id="touch-controls" class="touch-controls" hidden></div>
+    </div>
+  </div>
+
+  <noscript>
+    <div class="noscript">Auto Rally needs JavaScript enabled to play.</div>
+  </noscript>
+
+  <!-- Plain scripts (not ES modules) so the game also runs from file:// -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/track.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/touch.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/items.js"></script>
+  <script src="js/race.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/debug.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pwa.js"></script>
+</body>
+</html>
